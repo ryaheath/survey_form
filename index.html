@@ -4,8 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Document</title>
+     <style>
+       body {
+           font-family: sans-serif;
+           padding-left: 20%;
+           padding-right: 20%;
+           opacity: 80%;
+           background-color: darkblue;
+       }
+       #title {
+           text-align: center;
+           color: blanchedalmond;
+       }
+       #description {
+           text-align: center;
+           color: blanchedalmond;
+       }
+       label {
+           font-size: 18px;
+           display: block;
+           padding-bottom: 10px;
+       }
+       input {
+           display: block;
+           width: 100%;
+       }
+       textarea {
+           display: block;
+           width: 100%;
+       }
+       select {
+           display: block;
+           width: 100%;
+       }
+       form {
+           background-color:orangered;
+           padding: 40px 40px 40px 40px;
+       }
+       #button-area {
+           float: left;
+           width: 50%;
+           height: 50%; 
+       }
+     </style>
   </head>
   <body>
-    <h1 id="title">Tell Me About The Brand Of Rubik's Cube You Like</h1>
+    <h1 id="title">What's Your Favorite Rubik's Cube Brand</h1>
+    <p id="description">This is a survey where you can tell us about the rubik's cube that you feel is best.</p>
+    <form id="survey-form">
+      <label id="name-label">Name:</label> 
+      <input type="text" name="name" id="name" required placeholder="First Name"><br>
+      <label id="email-label">Email</label>
+      <input type="email" name="email" id="email" required placeholder="Email"><br>
+      <label id="number-label">Number</label>
+      <input type="number" name="number" id="number" min="0" max="10" required placeholder="Ranking"><br>
+
+      <label for="cube-type-label">Cube Type:<br>
+       <select id="dropdown" name="cubes">
+        <option value="gan">Gan</option>
+        <option value="moyu">MoYu</option>
+        <option value="qiyi">QiYi</option>
+        <option value="yuxin">Yuxin</option>
+      </select>
+     </label>
+
+      <label id="additional-comments-label">Additional Comments:</label>
+      <textarea placeholder="Additional Comments" cols="30" rows="10"></textarea><br>
+
+      <div id="button-area">
+        <label id="gender-label">Gender:</label>  
+        <input type="radio" id="male" name="gender" value="male">
+
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+
+        <label for="female">Female</label><br>
+        <input type="radio" id="other" name="gender" value="other">
+
+        <label for="other">Other</label>
+      </div>
+      <div id="button-area">
+       <label id="transportation-type-label">Transportation Type:</label>   
+       <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+
+       <label for="vehicle1"> I have a bike</label><br>
+       <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+
+       <label for="vehicle2"> I have a car</label><br>
+       <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+
+       <label for="vehicle3"> I have a boat</label><br>
+      </div> 
+      <input type="submit" id="submit">
+        
+    </form>
   </body>
+    <script type="text/javascript" src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </html>
